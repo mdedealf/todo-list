@@ -6,8 +6,7 @@ import {
 } from './types';
 
 const initialState = {
-  todo: [],
-  loading: false,
+  todos: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -15,22 +14,22 @@ const reducer = (state = initialState, action) => {
     case FETCH_MOCK_TODOLIST:
       return {
         ...state,
-        todo: action.payload,
+        todos: action.payload,
       };
     case ADD_TODOLIST:
       return {
         ...state,
-        todo: action.payload,
+        todos: action.payload,
       };
     case EDIT_TODOLIST:
       return {
         ...state,
-        todo: action.payload,
+        todos: action.payload,
       };
     case DELETE_TODOLIST:
       return {
         ...state,
-        todo: action.payload,
+        todos: action.payload,
       };
     default:
       return state;

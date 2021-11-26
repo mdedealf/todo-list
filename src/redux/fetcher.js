@@ -1,8 +1,13 @@
+import axios from 'axios';
 import { fetchMockTodoList } from './actions';
 
-export const todoLists = async url => dispatch => {
+export const fetchMockTodoLists = url => dispatch => {
   try {
-    dispatch(fetchMockTodoList(url));
+    axios.get(url).then(response => {
+      console.log(response.data);
+      dispatch(fetchMockTodoList(response.data));
+      console.log('success');
+    });
   } catch (error) {
     console.log(error);
   }

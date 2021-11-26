@@ -1,0 +1,22 @@
+ul {
+  background-color: rgb(217, 234, 240);
+  border-radius: 1rem;
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 24px;
+  padding: 24px;
+}
+
+.createDate {
+  padding-top: 14px;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+ul:hover {
+  cursor: pointer;
+}

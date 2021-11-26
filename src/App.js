@@ -1,12 +1,13 @@
-import './App.css';
-
 import React from 'react';
+import Wrapper from './components/Wrapper/Wrapper';
+
+import TodoList from './Container/TodoList';
 
 const App = () => {
   return (
-    <div>
-      <h1>APP</h1>
-    </div>
+    <Wrapper>
+      <TodoList />
+    </Wrapper>
   );
 };
 

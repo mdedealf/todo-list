@@ -70,11 +70,6 @@ const TodoList = () => {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        {/* <h1>{title}</h1>
-          <h2>{id}</h2>
-          <h2>{description}</h2>
-          <h2>{status}</h2>
-        <h2>{createdAt}</h2> */}
         <Button type="primary">Update</Button>
         <Button>Delete</Button>
       </Modal>
@@ -84,6 +79,8 @@ const TodoList = () => {
   return (
     <Fragment>
       <div className={styles.wrapper}>
+        <ModalDetail />
+        <h1>Todo List</h1>
         <form onSubmit={handleCreateTodo}>
           <Input
             placeholder="Title"
@@ -101,9 +98,8 @@ const TodoList = () => {
             Create Todo
           </Button>
         </form>
-        <div>
-          <h1>Selesai</h1>
-
+        <div className={styles.list}>
+          <h2>Selesai</h2>
           {finishedTodo.map(data => (
             <Card
               key={data.id}
@@ -115,9 +111,8 @@ const TodoList = () => {
             />
           ))}
         </div>
-        <div>
-          <h1>Belum Selesai</h1>
-
+        <div className={styles.list}>
+          <h2>Belum Selesai</h2>
           {notFinishedTodo.map(data => (
             <Card
               key={data.id}
@@ -130,7 +125,6 @@ const TodoList = () => {
           ))}
         </div>
       </div>
-      <ModalDetail />
     </Fragment>
   );
 };
